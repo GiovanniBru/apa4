@@ -17,7 +17,7 @@ void Max_Heapify(int aray[], int raiz, int tamanho) // "Tornar heap"
     if (filhoDir < tamanho && aray[filhoDir] > aray[maior]) // Verifica se o filho direito existe e se ele for maior que a raiz ocorre a troca..
         maior = filhoDir;
 
-    // Se houve troca do valor de "maior" durane os ifs, significa que a raiz não era o maior elemento, então temos que achar heapify para arrumar o resto...
+    // Se houve troca do valor de "maior" durane os ifs, significa que a raiz nÃ£o era o maior elemento, entÃ£o temos que achar heapify para arrumar o resto...
     if (maior != raiz)
     {
         swap(aray[raiz], aray[maior]); // troca os elementos da raiz inicial com o maior elemento apos o 1 heapify.
@@ -28,7 +28,7 @@ void Max_Heapify(int aray[], int raiz, int tamanho) // "Tornar heap"
 
 void HeapSort(int aray[], int tamanho)
 {
-    // O primeiro passo é criar um heap maximo, para isso vamos utilizar o metodo heapify, nao vamos chamar nas folhas pois ja estao "ordenadas"...
+    // O primeiro passo Ã© criar um heap maximo, para isso vamos utilizar o metodo heapify, nao vamos chamar nas folhas pois ja estao "ordenadas"...
     for (int i = ((tamanho / 2) - 1); i >= 0; i--)
         Max_Heapify(aray, i, tamanho);
 
