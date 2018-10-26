@@ -29,8 +29,8 @@ void Max_Heapify(int aray[], int raiz, int tamanho) // "Tornar heap"
 void HeapSort(int aray[], int tamanho)
 {
     // O primeiro passo é criar um heap maximo, para isso vamos utilizar o metodo heapify, nao vamos chamar nas folhas pois ja estao "ordenadas"...
-    for (int i = ((tamanho / 2) - 1); i >= 0; i--)
-        Max_Heapify(aray, i, tamanho);
+    for (int i = ((tamanho / 2) - 1); i >= 0; i--)// do meio pra esquerda
+        Max_Heapify(aray, i, tamanho);//Cria Heap a partir dos dados 
 
     for (int i=(tamanho-1); i>=0; i--)
     {
